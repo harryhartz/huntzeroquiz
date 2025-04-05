@@ -1,44 +1,44 @@
-body {
+    body {
     background-color: #000000;
     color: #00ff00;
     font-family: 'Consolas', 'Menlo', 'Courier New', monospace; /* Prioritize console fonts */
     margin: 0;
     padding: 20px;
     line-height: 1.6; /* Improve readability */
-}
-
-.container {
+    }
+    
+    .container {
      padding: 20px;
      max-width: 700px; /* Slightly wider for potentially longer lines */
      margin: 20px auto; /* Some margin from top */
-}
-
-h1 {
+    }
+    
+    h1 {
     color: #00ff00;
     text-align: center;
     font-size: 1.6em;
     margin-bottom: 10px;
-}
-
-.instructions {
+    }
+    
+    .instructions {
     color: #00ff00;
     margin-bottom: 40px; /* More space before questions */
     font-size: 1em;
     text-align: center;
-}
-
-.query-line {
+    }
+    
+    .query-line {
     margin-bottom: 15px; /* Space between lines */
-}
-
-.query-label {
+    }
+    
+    .query-label {
     display: inline; /* Keep label on same line conceptually */
     margin-right: 5px; /* Space between label and input area */
     color: #00ff00;
     font-weight: normal; /* Less emphasis than bold */
-}
-
-.query-input {
+    }
+    
+    .query-input {
     background-color: transparent; /* Invisible background */
     border: none; /* No border */
     border-bottom: 1px solid #005c00; /* DIM green underline only */
@@ -55,14 +55,14 @@ h1 {
     appearance: none;
     border-radius: 0;
     box-shadow: none;
-}
-
-.query-input:focus {
+    }
+    
+    .query-input:focus {
     border-bottom: 1px solid #00ff00; /* BRIGHT green underline when focused */
-}
-
-/* Make button look like part of the terminal */
-button {
+    }
+    
+    /* Make button look like part of the terminal */
+    button {
     background-color: transparent;
     color: #00ff00;
     border: 1px solid #00ff00;
@@ -73,51 +73,51 @@ button {
     display: block;
     margin: 30px auto 0 auto; /* Space above, centered */
     font-size: 1em;
-}
-
-button:hover {
+    }
+    
+    button:hover {
     background-color: #00ff00; /* Invert on hover */
     color: #000000;
-}
-
-/* Result area styling */
-.result {
+    }
+    
+    /* Result area styling */
+    .result {
     margin-top: 30px;
     padding: 10px 0; /* Padding only top/bottom */
     white-space: pre-wrap;
     text-align: left;
     font-size: 1em;
     border-top: 1px dashed #005c00; /* Separator line */
-}
-
-.result p { /* Style paragraphs within result area */
+    }
+    
+    .result p { /* Style paragraphs within result area */
     margin: 5px 0; /* Minimal spacing between result lines */
-}
-
-.result-success strong, .result-success p {
+    }
+    
+    .result-success strong, .result-success p {
     color: #00ff00;
-}
-
-.result-failure strong, .result-failure p {
+    }
+    
+    .result-failure strong, .result-failure p {
     color: #ff4d4d; /* Red for failure text */
-}
-
-.repo-link {
+    }
+    
+    .repo-link {
     color: #66ccff; /* Light blue link */
     text-decoration: none;
     font-weight: bold;
     display: inline-block; /* Allow background change on hover */
     padding: 2px;
-}
-
-.repo-link:hover {
+    }
+    
+    .repo-link:hover {
     text-decoration: none;
     background-color: #66ccff;
     color: #000000; /* Black text on blue hover */
-}
-
-#result-area img {
+    }
+    
+    #result-area img {
     max-width: 200px; /* Slightly smaller GIF? */
     display: block;
     margin: 15px 0; /* Below text, align left */
-}
+    }
