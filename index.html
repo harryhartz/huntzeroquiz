@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Authentication | Hunt Zero</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Authentication | Hunt Zero</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Wow, you came this far... but do you really know me?</h1>
-        <p class="instructions">Authenticate identity. Retrieve final coordinates.</p> 
+<div class="container">
+    <h1>Wow, you came this far... but do you really know me?</h1>
+    <p class="instructions">Authenticate identity. Retrieve final coordinates.</p> 
 
-        <form id="quiz-form">
-            <div class="query-line">
-                <label for="q1" class="query-label">> (IPL Franchise): </label>
-                <input type="text" id="q1" name="q1" class="query-input" required autocomplete="off">
-            </div>
-
-            <div class="query-line">
-                <label for="q2" class="query-label">> (Most Disdained Curry): </label>
-                <input type="text" id="q2" name="q2" class="query-input" required autocomplete="off">
-            </div>
-
-            <div class="query-line">
-                <label for="q3" class="query-label">> (Diminutive Moniker): </label>
-                <input type="text" id="q3" name="q3" class="query-input" required autocomplete="off">
-            </div>
-
-            <button type="submit" id="submit-button">[ AUTHENTICATE ]</button>
-        </form>
-
-       
-        <div id="result-area" class="result" style="display: none;">
-           
+    <form id="quiz-form">
+        <div class="query-line">
+            <label for="q1" class="query-label">> (IPL Franchise): </label>
+            <input type="text" id="q1" name="q1" class="query-input" required autocomplete="off">
         </div>
-    </div>
 
-    <script src="script.js"></script> 
+        <div class="query-line">
+            <label for="q2" class="query-label">> (Most Disdained Curry): </label>
+            <input type="text" id="q2" name="q2" class="query-input" required autocomplete="off">
+        </div>
+
+        <div class="query-line">
+            <label for="q3" class="query-label">> (Diminutive Moniker): </label>
+            <input type="text" id="q3" name="q3" class="query-input" required autocomplete="off">
+        </div>
+
+        <button type="submit" id="submit-button">[ AUTHENTICATE ]</button>
+    </form>
+
+   
+    <div id="result-area" class="result" style="display: none;">
+       
+    </div>
+</div>
+
+<script src="script.js"></script> 
 </body>
 </html>
