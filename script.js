@@ -18,28 +18,37 @@ document.getElementById('quiz-form').addEventListener('submit', function(event) 
     const quizForm = document.getElementById('quiz-form'); // Get the form element
     const githubRepoUrl = `https://github.com/harryhartz/huntzero.git`;
     const successGifPath = 'abc.gif'; // Path to your GIF (in the same folder)
+    const headingElement = document.querySelector('h1'); // <-- ADD THIS LINE
+    const instructionsParagraph = document.querySelector('.instructions'); // <-- ADD THIS LINE
 
-    if (userAnswer1 === correctAnswer1 &&
+        if (userAnswer1 === correctAnswer1 &&
         userAnswer2 === correctAnswer2 &&
         userAnswer3 === correctAnswer3) {
         // Success
 
-        // 1. Hide the form
+        // Existing code to hide elements...
+        headingElement.style.display = 'none';
+        instructionsParagraph.style.display = 'none';
         quizForm.style.display = 'none';
 
-        // 2. Show success message WITH the GIF
+        // Modify the innerHTML part, specifically the img style:
         resultArea.innerHTML = `
-            <img src="${successGifPath}" alt="Success!" style="max-width: 250px; display: block; margin: 15px auto;"> 
+            <img src="${successGifPath}" alt="Success!" style="max-width: 450px; display: block; margin: 25px auto;"> 
             <p class="result-success"><strong>> Authentication Successful.</strong></p>
             <p class="result-success">> Coordinates unlocked:</p>
             <p class="result-success">> <a href="${githubRepoUrl}" target="_blank" class="repo-link">${githubRepoUrl}</a></p>
         `;
         resultArea.className = 'result result-success';
+        // Existing code...
 
     } else {
-        // Failure - Ensure form is visible if they failed previously then retry
-        quizForm.style.display = 'block'; // Make sure form is visible on failure
+        // Failure
+        // Optional: Ensure they are visible on failure if they retry after success
+        headingElement.style.display = 'block';          // <-- ADD THIS LINE (Show heading)
+        instructionsParagraph.style.display = 'block'; // <-- ADD THIS LINE (Show instructions)
+        quizForm.style.display = 'block';                // Keep this line (Show form)
 
+        // Existing code to set resultArea.innerHTML with failure message...
         resultArea.innerHTML = `
             <p class="result-failure"><strong>> Authentication Failed.</strong></p>
             <p class="result-failure">> One or more keys incorrect.</p>
@@ -48,5 +57,5 @@ document.getElementById('quiz-form').addEventListener('submit', function(event) 
          resultArea.className = 'result result-failure';
     }
 
-    resultArea.style.display = 'block';
+    resultArea.style.display = 'block'; // Keep this line
 });
